@@ -7,21 +7,12 @@
 1. Symlink wezterm.lua
 `ln -s ~/laptop/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua`
 
-## Setup Python
-Add this to .zshrc
-```
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-```
-
-Then install a version
+## Setup Pyenv
+Install a version
 ```bash
 pyenv install 3.11.7
 pyenv global 3.11.7
 ```
-
 ## Software Probably Needed
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - [Open-WebUI](https://github.com/open-webui/open-webui)
@@ -30,7 +21,7 @@ pyenv global 3.11.7
 Create a directory for persistent chats
 `mkdir -p ~/ollama_webui_data`
 
-Run the image
+Run the image (`start-openwebui`)
 ```
 docker run -d \
   -p 3000:8080 \
@@ -39,7 +30,7 @@ docker run -d \
   --name open-webui \
   --restart always \
   ghcr.io/open-webui/open-webui:main
-  ```
+```
 
 ## Shell
 - [Starship](https://starship.rs/)
@@ -54,4 +45,8 @@ Link Starship
 `ln -s ~/laptop/starship/starship.toml ~/.config/starship.toml`
 
 Link Antidote
-`ln -s ~/laptop/antidote ~/.antidote`
+1. Pull the latest from the submodule
+1. `ln -s ~/laptop/antidote ~/.antidote`
+
+Install NerdFont
+_Included in the brewfile_
