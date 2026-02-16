@@ -1,0 +1,16 @@
+add_newline = false
+
+format = "$directory$git_branch$git_status"
+
+[directory]
+truncation_length = 3
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[git_branch]
+symbol = " "
+
+[package]
+disabled = true

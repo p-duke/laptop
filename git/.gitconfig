@@ -1,0 +1,39 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Peter Duke
+	email = 8197409+p-duke@users.noreply.github.com
+
+# Aliases are command shortcuts
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+
+	# Edit the last commit
+	amend = commit --verbose --amend
+
+	# lg is now a shortcut for a pretty log with short commit messages
+	# See the log manpage: https://www.kernel.org/pub/software/scm/git/docs/git-log.html
+	# for explanations of what these options do
+	lg = log \
+	     --graph \
+	     --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
+	     --abbrev-commit \
+	     --date=relative
+
+	# lum is a shortcut to see diffs in commit between head and origin/master. Log upstream master
+ 	lum = log \
+	   ...origin/main \
+	   --left-right \
+	   --graph \
+	   --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
+	   --abbrev-commit \
+	   --date=relative
+
+	# Rebase with origin/master
+	rum = rebase origin/main
+[core]
+	excludesFile = /Users/peterduke/.gitignore_global
+

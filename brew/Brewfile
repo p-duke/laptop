@@ -1,0 +1,9 @@
+brew "neovim"
+brew "pyenv"
+brew "ollama"
+brew "libjpeg"
+brew "postgresql"
+brew "starship"
+
+cask "font-hack-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
