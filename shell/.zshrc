@@ -3,10 +3,7 @@
 # ----------------------------
 
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
-
-# Plugins
-antidote bundle zsh-users/zsh-autosuggestions
-antidote bundle zsh-users/zsh-syntax-highlighting
+antidote load
 
 # ----------------------------
 # Aliases

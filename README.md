@@ -47,6 +47,7 @@ Link Starship
 Link Antidote
 1. Pull the latest from the submodule
 1. `ln -s ~/laptop/antidote ~/.antidote`
+1. `ln -s ~/laptop/shell/.zsh_plugins.txt ~/.zsh_plugins.txt`
 
 Install NerdFont
 _Included in the brewfile_
