@@ -6,11 +6,17 @@ source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 antidote load
 
 # ----------------------------
+# Zsh Completion
+# ----------------------------
+autoload -Uz compinit
+compinit
+
+# ----------------------------
 # Aliases
 # ----------------------------
 
 alias ll="ls -lah"
-alias gs="git status"
+alias gst="git status"
 alias gc="git commit"
 alias gp="git push"
 alias start-openwebui='docker run -d -p 3000:8080 -v ~/llm/ollama_webui_data:/data -e OLLAMA_BASE_URL=http://host.docker.internal:11434 -e WEBUI_AUTH=False --name open-webui --restart always ghcr.io/open-webui/open-webui:main'
@@ -29,3 +35,9 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
+# ----------------------------
+# Load local overrides (never committed)
+# ----------------------------
+if [ -f "$HOME/.zshrc.local" ]; then
+  source "$HOME/.zshrc.local"
+fi

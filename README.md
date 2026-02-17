@@ -37,17 +37,23 @@ docker run -d \
 - [Antidote](https://antidote.sh/)
 - [Nerd Fonts](https://www.nerdfonts.com/)
 
-Link .zshrc
+### Link .zshrc
 `ln -s ~/laptop/shell/.zshrc ~/.zshrc`
 
-Link Starship
+### Link Starship
 `mkdir -p ~/.config`
 `ln -s ~/laptop/starship/starship.toml ~/.config/starship.toml`
 
-Link Antidote
-1. Pull the latest from the submodule
+### Link Antidote
+1. Pull the latest from the submodule in ~/laptop/
+`git submodule update --init --recursive`
+
 1. `ln -s ~/laptop/antidote ~/.antidote`
 1. `ln -s ~/laptop/shell/.zsh_plugins.txt ~/.zsh_plugins.txt`
 
 Install NerdFont
 _Included in the brewfile_
+
+Create a .zshrc.local to extend
+`touch ~/.zshrc.local`
+
