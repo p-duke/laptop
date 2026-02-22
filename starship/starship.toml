@@ -1,6 +1,6 @@
 add_newline = false
 
-format = "$directory$git_branch$git_status"
+format = "$python$directory$git_branch$git_status$character"
 
 [directory]
 truncation_length = 3
@@ -14,3 +14,9 @@ symbol = " "
 
 [package]
 disabled = true
+
+[python]
+format = "($virtualenv) "
+detect_extensions = []
+detect_files = []
+detect_folders = []
