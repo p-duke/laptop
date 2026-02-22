@@ -17,8 +17,7 @@ compinit
 
 alias ll="ls -lah"
 alias gst="git status"
-alias gc="git commit"
-alias gp="git push"
+alias gpl="git pull"
 alias start-openwebui='docker run -d -p 3000:8080 -v ~/llm/ollama_webui_data:/data -e OLLAMA_BASE_URL=http://host.docker.internal:11434 -e WEBUI_AUTH=False --name open-webui --restart always ghcr.io/open-webui/open-webui:main'
 
 # ----------------------------
