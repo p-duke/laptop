@@ -1,6 +1,6 @@
 add_newline = false
 
-format = "$python$directory$git_branch$git_status$character"
+format = "$hostname$python$directory$git_branch$git_status$character"
 
 [directory]
 truncation_length = 3
@@ -20,3 +20,8 @@ format = "($virtualenv) "
 detect_extensions = []
 detect_files = []
 detect_folders = []
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style) "
+style = "bold blue"
