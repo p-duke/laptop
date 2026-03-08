@@ -4,6 +4,8 @@ brew "ollama"
 brew "libjpeg"
 brew "postgresql"
 brew "starship"
+brew "poppler" # pdftotext
+brew "llmfit"
 
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
